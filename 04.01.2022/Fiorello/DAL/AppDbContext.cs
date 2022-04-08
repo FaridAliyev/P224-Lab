@@ -20,5 +20,8 @@ namespace Fiorello.DAL
         public DbSet<AboutFeature> AboutFeatures { get; set; }
         public DbSet<Expert> Experts { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<InstaPhoto> InstaPhotos { get; set; }
     }
 }

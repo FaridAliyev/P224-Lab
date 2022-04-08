@@ -130,10 +130,15 @@
                                 <i class="fas fa-search" id="search"></i>
                                 <ul class="list-unstyled py-3">
                                     <li class="d-flex px-3">
-                                        <input id="input-search" type="text" placeholder="Search">
+                                        <form method="get" asp-controller="Product" asp-action="Search">
+                                            <input name="query" id="input-search" type="text" placeholder="Search" autocomplete="off">
+                                            <ol id="prod-search-list">
+                                                
+                                            </ol>
+                                            @*<input type="hidden" name="returnUrl" value="@string.Format("{0}{1}",Context.Request.Path, Context.Request.QueryString)"/>*@
+                                        </form>
                                         <i class="fas fa-search my-auto" id="search"></i>
                                     </li>
-
                                 </ul>
                             </li>
                             <li class="nav-item my-auto shop-cart">
@@ -278,3 +283,5 @@
     </div>
 
 </header>
+
+

@@ -13,5 +13,6 @@ namespace Fiorello.Models
         public string Surname { get; set; }
         public int PositionId { get; set; }
         public Position Position { get; set; }
+        public Testimonial Testimonial { get; set; }
     }
 }

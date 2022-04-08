@@ -15,5 +15,8 @@ namespace Fiorello.ViewModels
         public About About { get; set; }
         public List<AboutFeature> AboutFeatures { get; set; }
         public List<Expert> Experts { get; set; }
+        public List<Blog> Blogs { get; set; }
+        public List<Testimonial> Testimonials { get; set; }
+        public List<InstaPhoto> InstaPhotos { get; set; }
     }
 }

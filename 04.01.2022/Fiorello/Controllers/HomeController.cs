@@ -29,7 +29,11 @@ namespace Fiorello.Controllers
                 Products = await _db.Products.Include(p => p.Category).ToListAsync(),
                 About = await _db.Abouts.FirstOrDefaultAsync(),
                 AboutFeatures = await _db.AboutFeatures.ToListAsync(),
-                Experts = await _db.Experts.Include(e => e.Position).ToListAsync()
+                Experts = await _db.Experts.Include(e => e.Position).ToListAsync(),
+                Blogs = await _db.Blogs.ToListAsync(),
+                Testimonials = await _db.Testimonials.Include(t => t.Expert).ThenInclude(e => e.Position).ToListAsync(),
+                InstaPhotos=await _db.InstaPhotos.ToListAsync()
+
             };
 
             return View(model);

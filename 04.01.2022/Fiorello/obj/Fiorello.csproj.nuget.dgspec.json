@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faridra\\source\\repos\\Fiorello\\Fiorello.csproj": {}
+    "C:\\Users\\faridra\\Desktop\\P224-Lab\\04.01.2022\\Fiorello\\Fiorello.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faridra\\source\\repos\\Fiorello\\Fiorello.csproj": {
+    "C:\\Users\\faridra\\Desktop\\P224-Lab\\04.01.2022\\Fiorello\\Fiorello.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faridra\\source\\repos\\Fiorello\\Fiorello.csproj",
+        "projectUniqueName": "C:\\Users\\faridra\\Desktop\\P224-Lab\\04.01.2022\\Fiorello\\Fiorello.csproj",
         "projectName": "Fiorello",
-        "projectPath": "C:\\Users\\faridra\\source\\repos\\Fiorello\\Fiorello.csproj",
+        "projectPath": "C:\\Users\\faridra\\Desktop\\P224-Lab\\04.01.2022\\Fiorello\\Fiorello.csproj",
         "packagesPath": "C:\\Users\\faridra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faridra\\source\\repos\\Fiorello\\obj\\",
+        "outputPath": "C:\\Users\\faridra\\Desktop\\P224-Lab\\04.01.2022\\Fiorello\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\faridra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.23, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

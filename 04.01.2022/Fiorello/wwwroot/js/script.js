@@ -147,4 +147,21 @@ $(document).ready(function () {
             }
         );
       });
+
+    $('#input-search').keyup(function () {
+        let val = $(this).val().trim();
+        if (val.length > 1) {
+            $.ajax({
+                type: "GET",
+                url: "/Product/SearchPartial?query=" + val,
+                success: function (response) {
+                    $('#prod-search-list').html("");
+                    $('#prod-search-list').html(response);
+                }
+            })
+        }
+        else {
+            $('#prod-search-list').html("");
+        }
+    })
 })
