@@ -16,7 +16,7 @@
                     <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" asp-controller="Home">Home</a>
                                 <ul class="list-unstyled py-3">
                                     <li class=""><a class="px-1" href="">Home 1</a></li>
                                     <li class=""><a class="px-1" href="">Home 2</a></li>
@@ -143,8 +143,8 @@
                             </li>
                             <li class="nav-item my-auto shop-cart">
                                 <i class="fas fa-shopping-bag"></i>
-                                <sup class="rounded-circle">0</sup>
-                                <span>CART ($0)</span>
+                                <sup class="rounded-circle basketCount">@ViewBag.BasketCount</sup>
+                                <span>CART ($<span class="basketTotalPrice">@ViewBag.TotalPrice</span>)</span>
                                 <ul class="list-unstyled py-3">
                                     <li class="">No products in the cart.</li>
                                 </ul>

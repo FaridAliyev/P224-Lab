@@ -1,0 +1,47 @@
+﻿@model List<BasketVM>
+<div class="table-responsive shopping-cart">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-center">Subtotal</th>
+                <th class="text-center"><a class="btn btn-sm btn-outline-danger" href="#">Clear Cart</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (BasketVM item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="product-item">
+                            <a class="product-thumb" href="#"><img src="~/img/@item.Image" alt="Product"></a>
+                            <div class="product-info">
+                                <h4 class="product-title"><a href="#">@item.Name</a></h4><span><em>Price:</em> @item.Price</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="count-input">
+                            <input value="@item.Quantity" type="number" min="1" />
+                        </div>
+                    </td>
+                    <td class="text-center text-lg text-medium">$@item.Subtotal</td>
+                    <td class="text-center"><a class="remove-from-cart" asp-controller="Basket" asp-action="RemoveItem" asp-route-id="@item.Id" data-toggle="tooltip" title="" data-original-title="Remove item"><i class="fa fa-trash"></i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="shopping-cart-footer">
+        @{ 
+            double sum = 0;
+            foreach (BasketVM item in Model)
+            {
+                sum += item.Price * item.Quantity;
+            }
+        }
+        <div class="column text-lg">Total: <span class="text-medium">$@sum</span></div>
+    </div>
+</div>
+
+
